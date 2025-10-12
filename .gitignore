@@ -1,0 +1,112 @@
+# ===============================================
+# Project Root .gitignore
+# حماية المجلدات والملفات الحساسة للمشروع الكامل
+# ===============================================
+
+# ملفات البيئة العامة
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.staging
+*.env
+
+# ملفات النظام
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# مجلدات IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ملفات Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+
+# ملفات النسخ الاحتياطية
+*.backup
+*.bak
+*.old
+*.orig
+*.save
+*.tmp
+
+# ملفات التسجيل
+logs/
+*.log
+
+# ملفات قواعد البيانات المحلية
+*.db
+*.sqlite
+*.sqlite3
+
+# ملفات الصور المرفوعة
+uploads/
+user-uploads/
+
+# ملفات التكوين الحساسة
+config.local.js
+settings.local.js
+secrets.json
+credentials.json
+
+# ملفات الأمان
+*.key
+*.pem
+*.p12
+*.crt
+*.csr
+*.cer
+
+# مجلدات البناء
+dist/
+build/
+out/
+
+# مجلدات التجارب
+test-data/
+mock-data/
+experiments/
+
+# ملفات الأدمن والإدارة
+admin.html
+admin-*.html
+dashboard.html
+management.html
+admin/
+dashboard/
+management/
+
+# ملفات JavaScript الحساسة
+admin.js
+admin-*.js
+password-*.js
+secret-*.js
+auth-*.js
+
+# ملفات خاصة بالنشر
+deployment/
+production/
+staging/
+
+# أي ملف يحتوي على معلومات حساسة
+*password*
+*secret*
+*admin*
+*private*
+*sensitive*

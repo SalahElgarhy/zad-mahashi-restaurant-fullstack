@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+
+  <title>إتمام الطلب - زاد</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <!-- cart style -->
+  <link href="css/cart.css" rel="stylesheet" />
+
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <div class="bg-box">
+      <img src="images/hero-bg.jpg" alt="">
+    </div>
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>زاد</span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">الصفحة الرئيسية</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="menu.html">القائمة</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">من نحن</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="book.html">احجز طاولة</a>
+              </li>
+            </ul>
+            <div class="user_option">
+              <a href="" class="user_link">
+                <i class="fa fa-user" aria-hidden="true"></i>
+              </a>
+              <a class="cart_link" href="menu.html">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              </a>
+              <form class="form-inline">
+                <button class="btn my-2 my-sm-0 nav_search-btn" type="submit">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+              <a href="" class="order_online">Order Online</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- checkout section -->
+  <section class="food_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>إتمام الطلب</h2>
+      </div>
+
+      <div class="row">
+        <!-- عرض منتجات العربة -->
+        <div class="col-lg-8">
+          <div class="card">
+            <div class="card-header">
+              <h4><i class="fa fa-shopping-cart"></i> منتجات العربة</h4>
+            </div>
+            <div class="card-body">
+              <div id="checkoutItems">
+                <!-- سيتم ملء المنتجات هنا بواسطة JavaScript -->
+              </div>
+              <hr>
+              <div class="text-right">
+                <h4>المجموع الكلي: <span id="checkoutTotal" style="color: #ffbe33;">0 ج</span></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- نموذج بيانات العميل -->
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-header">
+              <h4><i class="fa fa-user"></i> بيانات العميل</h4>
+            </div>
+            <div class="card-body">
+              <form id="orderForm">
+                <div class="form-group">
+                  <label>الاسم الكامل *</label>
+                  <input type="text" class="form-control" name="customer_name" required>
+                </div>
+                
+                <div class="form-group">
+                  <label>رقم التليفون *</label>
+                  <input type="tel" class="form-control" name="customer_phone" required>
+                </div>
+                
+                <div class="form-group">
+                  <label>العنوان بالتفصيل *</label>
+                  <textarea class="form-control" name="customer_address" rows="3" required placeholder="الشارع، الحي، المدينة..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                  <label>ملاحظات إضافية</label>
+                  <textarea class="form-control" name="customer_notes" rows="2" placeholder="أي طلبات خاصة أو ملاحظات..."></textarea>
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                  <label><i class="fa fa-credit-card"></i> طريقة الدفع *</label>
+                  <div class="payment-methods">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="payment_method" value="cash" id="cash" required>
+                      <label class="form-check-label" for="cash">
+                        <i class="fa fa-money"></i> الدفع كاش عند الاستلام
+                      </label>
+                    </div>
+                    
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="payment_method" value="vodafone_cash" id="vodafone" required>
+                      <label class="form-check-label" for="vodafone">
+                        <i class="fa fa-mobile"></i> فودافون كاش
+                      </label>
+                    </div>
+                    
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="payment_method" value="instapay" id="instapay" required>
+                      <label class="form-check-label" for="instapay">
+                        <i class="fa fa-mobile"></i> انستاباي
+                      </label>
+                    </div>
+                    
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="payment_method" value="card" id="card" required>
+                      <label class="form-check-label" for="card">
+                        <i class="fa fa-credit-card"></i> Card or Visa
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- قسم بيانات البطاقة (يظهر عند اختيار Card) -->
+                <div id="cardSection" style="display: none;">
+                  <hr>
+                  <h5><i class="fa fa-credit-card"></i> بيانات البطاقة</h5>
+                  
+                  <div class="form-group">
+                    <label>اسم حامل البطاقة *</label>
+                    <input type="text" class="form-control" name="cardholder_name">
+                  </div>
+                  
+                  <div class="form-group">
+                    <label>رقم البطاقة *</label>
+                    <input type="text" class="form-control" name="card_number" placeholder="1234 5678 9012 3456" maxlength="19">
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label>تاريخ الانتهاء *</label>
+                        <input type="text" class="form-control" name="expiry_date" placeholder="MM/YY" maxlength="5">
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label>CVV *</label>
+                        <input type="text" class="form-control" name="cvv" placeholder="123" maxlength="4">
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="alert alert-info">
+                    <i class="fa fa-shield"></i>
+                    <small>بياناتك آمنة ومحمية بالكامل</small>
+                  </div>
+                </div>
+
+                <hr>
+
+                <button type="button" class="btn btn-danger btn-block mb-2" onclick="goBackToMenu()">
+                  <i class="fa fa-arrow-right"></i> العودة للقائمة
+                </button>
+                
+                <button type="submit" class="btn btn-success btn-block btn-lg">
+                  <i class="fa fa-check"></i> تأكيد الطلب وإرسال
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end checkout section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 footer-col">
+          <div class="footer_content">
+            <div class="footer_logo">
+              <a href="">زاد</a>
+            </div>
+            <p>
+              مطعم زاد يقدم أفضل الأطباق العربية الأصيلة بطعم منزلي مميز
+            </p>
+            <div class="footer_social">
+              <a href="https://www.facebook.com/MahashiZad" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href="https://www.tiktok.com/@mahashizad?_t=ZS-8zcKSz4lShI&_r=1" target="_blank"><i class="fa fa-music" aria-hidden="true" title="TikTok"></i></a>
+              <a href="https://wa.me/2001105642820" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+              <a href="https://www.instagram.com/mahashi.zad?igsh=dmp0c3J6ZmozZDAw" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 footer-col">
+          <div class="footer_detail">
+            <h4>معلومات التواصل</h4>
+            <div class="contact_nav">
+              <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i><span>العنوان</span></a>
+              <a href="tel:01105642820"><i class="fa fa-phone" aria-hidden="true"></i><span>📞 اتصل للحجز السريع - 01105642820</span></a>
+              <a href="https://wa.me/2001105642820"><i class="fa fa-whatsapp" aria-hidden="true"></i><span>راسلنا على واتساب</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 footer-col">
+          <h4>ساعات العمل</h4>
+          <p>كل يوم</p>
+          <p>10.00 ص - 10.00 م</p>
+        </div>
+      </div>
+      <div class="footer-info">
+        <p>&copy; <span id="displayYear"></span> جميع الحقوق محفوظة لـ <a href="">زاد</a></p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQuery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- Socket.IO -->
+  <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+  <!-- API Service -->
+  <script src="js/api.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+  <!-- cart js -->
+  <script src="js/cart.js"></script>
+  <!-- checkout js -->
+  <script src="js/checkout.js"></script>
+  
+  <script>
+    // إنشاء العربة
+    const cart = new ShoppingCart();
+  </script>
+
+</body>
+</html>

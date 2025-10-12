@@ -1,0 +1,1909 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+
+  <title> زاد </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- nice select  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  
+  <style>
+    /* منع إظهار # في الـ URL */
+    a[href="#"] {
+      cursor: pointer;
+    }
+    
+    /* تحسين أزرار العربة */
+    .add-to-cart-btn {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .add-to-cart-btn:hover {
+      transform: scale(1.05);
+    }
+    
+    /* منع التمرير للأعلى عند الضغط على # */
+    .add-to-cart-btn:focus {
+      outline: none;
+    }
+  </style>
+  
+  <!-- Custom Hero Section Styles -->
+  <style>
+    .hero-image {
+      width: 380px !important;
+      height: 380px !important;
+      object-fit: cover !important;
+      object-position: center !important;
+      border: 6px solid #ffbe33 !important;
+      box-shadow: 0 15px 40px rgba(255, 190, 51, 0.4), 
+                  inset 0 0 20px rgba(255, 190, 51, 0.1) !important;
+      transition: all 0.4s ease !important;
+      display: block !important;
+      margin: 0 auto !important;
+      filter: brightness(1.1) contrast(1.1) saturate(1.1) !important;
+      image-rendering: -webkit-optimize-contrast !important;
+      image-rendering: crisp-edges !important;
+    }
+    
+    .hero-image:hover {
+      transform: scale(1.08) rotate(2deg) !important;
+      box-shadow: 0 20px 50px rgba(255, 190, 51, 0.6),
+                  inset 0 0 30px rgba(255, 190, 51, 0.2) !important;
+      filter: brightness(1.2) contrast(1.2) saturate(1.2) !important;
+      border-width: 8px !important;
+    }
+    
+    /* تأكد من أن جميع الصور في الـ slider تأخذ نفس الشكل */
+    .slider_section .img-box {
+      padding: 10px !important;
+    }
+    
+    .slider_section .img-box img {
+      width: 380px !important;
+      height: 380px !important;
+      object-fit: cover !important;
+      object-position: center !important;
+      border-radius: 50% !important;
+      border: 6px solid #ffbe33 !important;
+      box-shadow: 0 15px 40px rgba(255, 190, 51, 0.4), 
+                  inset 0 0 20px rgba(255, 190, 51, 0.1) !important;
+      transition: all 0.4s ease !important;
+      filter: brightness(1.1) contrast(1.1) !important;
+    }
+    
+    .slider_section .img-box img:hover {
+      transform: scale(1.08) rotate(2deg) !important;
+      box-shadow: 0 20px 50px rgba(255, 190, 51, 0.6),
+                  inset 0 0 30px rgba(255, 190, 51, 0.2) !important;
+      filter: brightness(1.2) contrast(1.2) !important;
+      border-width: 8px !important;
+    }
+    
+    .slider_section {
+      padding: 60px 0 !important;
+    }
+    
+    .min-vh-75 {
+      min-height: 75vh;
+    }
+    
+    .slider_section .detail-box {
+      margin-bottom: 0 !important;
+    }
+    
+    .slider_section .detail-box h1 {
+      font-size: 3.2rem !important;
+      margin-bottom: 25px !important;
+    }
+    
+    .slider_section .detail-box p {
+      font-size: 16px !important;
+      line-height: 1.6 !important;
+      margin-bottom: 30px !important;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-image, 
+      .slider_section .img-box img {
+        width: 300px !important;
+        height: 300px !important;
+        margin-top: 30px !important;
+      }
+      
+      .slider_section .detail-box h1 {
+        font-size: 2.5rem !important;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .hero-image,
+      .slider_section .img-box img {
+        width: 250px !important;
+        height: 250px !important;
+      }
+      
+      .slider_section .img-box {
+        margin-top: 20px !important;
+      }
+    }
+    
+    /* تحسين النافيجيشن - لون داكن وغامق */
+    .header_section {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 2px solid #ffbe33;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .custom_nav-container {
+      background: transparent !important;
+    }
+    
+    .navbar-brand span {
+      color: #ffbe33 !important;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      font-weight: 700 !important;
+    }
+    
+    .custom_nav-container .navbar-nav .nav-item .nav-link {
+      color: #ffffff !important;
+      font-weight: 600 !important;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease !important;
+    }
+    
+    .custom_nav-container .navbar-nav .nav-item:hover .nav-link,
+    .custom_nav-container .navbar-nav .nav-item.active .nav-link {
+      color: #ffbe33 !important;
+      transform: translateY(-2px);
+      text-shadow: 2px 2px 4px rgba(255, 190, 51, 0.3);
+    }
+    
+    .user_option .user_link {
+      color: #ffffff !important;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    
+    .user_option .user_link:hover {
+      color: #ffbe33 !important;
+      transform: scale(1.1);
+    }
+    
+    .user_option .cart_link svg {
+      fill: #ffffff !important;
+      filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
+    }
+    
+    .user_option .cart_link:hover svg {
+      fill: #ffbe33 !important;
+      transform: scale(1.1);
+    }
+    
+    .user_option .order_online {
+      background: linear-gradient(135deg, #ffbe33 0%, #f0a500 100%) !important;
+      box-shadow: 0 4px 15px rgba(255, 190, 51, 0.4) !important;
+      font-weight: 600 !important;
+      transition: all 0.3s ease !important;
+    }
+    
+    .user_option .order_online:hover {
+      background: linear-gradient(135deg, #f0a500 0%, #d4931f 100%) !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 6px 20px rgba(255, 190, 51, 0.6) !important;
+    }
+    
+    .nav_search-btn {
+      color: #ffffff !important;
+      transition: all 0.3s ease !important;
+    }
+    
+    .nav_search-btn:hover {
+      color: #ffbe33 !important;
+      transform: scale(1.1) !important;
+    }
+    
+    /* تحسين الهامبرغر منيو */
+    .custom_nav-container .navbar-toggler span {
+      background-color: #ffffff !important;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+    }
+    
+    .custom_nav-container .navbar-toggler span::before,
+    .custom_nav-container .navbar-toggler span::after {
+      background-color: #ffffff !important;
+    }
+    
+    /* تحسين صور العروض */
+    .offer_section .box .img-box {
+      width: 180px !important;
+      height: 180px !important;
+      min-width: 180px !important;
+      overflow: hidden !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    
+    .offer_section .box .img-box img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      object-position: center !important;
+      border-radius: 50% !important;
+      transition: all 0.3s ease !important;
+      filter: brightness(1.1) contrast(1.1) !important;
+    }
+    
+    .offer_section .box:hover .img-box img {
+      transform: scale(1.15) !important;
+      filter: brightness(1.2) contrast(1.2) !important;
+    }
+    
+    /* تحسين عناصر قائمة التصفية */
+    .food_section .filters_menu li {
+      background-color: #222831 !important;
+      color: #ffffff !important;
+      margin: 5px !important;
+      transition: all 0.3s ease !important;
+      border: 2px solid transparent !important;
+    }
+    
+    .food_section .filters_menu li:hover {
+      background-color: #ffbe33 !important;
+      color: #ffffff !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 4px 15px rgba(255, 190, 51, 0.4) !important;
+    }
+    
+    .food_section .filters_menu li.active {
+      background-color: #ffbe33 !important;
+      color: #ffffff !important;
+      border-color: #f0a500 !important;
+      box-shadow: 0 4px 15px rgba(255, 190, 51, 0.5) !important;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="hero_area">
+    <div class="bg-box">
+      <img src="images/hero-bg.jpg" alt="">
+    </div>
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              زاد
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  mx-auto ">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">الرئيسية <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="menu.html">القائمة</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">من نحن</a>
+              </li>
+            </ul>
+            <div class="user_option">
+              <a href="" class="user_link">
+                <i class="fa fa-user" aria-hidden="true"></i>
+              </a>
+              <a class="cart_link" href="checkout.html" id="cartIconIndex" onclick="updateCartIconIndex()">
+                <span id="cartCountIndex" class="cart-count" style="position: absolute; top: -8px; right: -8px; background: #ffbe33; color: #1a1a1a; border-radius: 50%; width: 20px; height: 20px; font-size: 12px; font-weight: bold; display: none; align-items: center; justify-content: center;">0</span>
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                  <g>
+                    <g>
+                      <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                   c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                   C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                   c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                   C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                   c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                    </g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                </svg>
+              </a>
+              <form class="form-inline">
+                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+              <a href="#" class="order_online" id="orderOnlineBtn">
+                Order Online
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row align-items-center min-vh-75">
+                <div class="col-md-6 col-lg-5">
+                  <div class="detail-box">
+                    <h1>
+                      مطعم زاد
+                    </h1>
+                    <p>
+                      نقدم لك أشهى الأطباق المحضرة بعناية فائقة من أجود المكونات. استمتع بتجربة طعام لا تُنسى في أجواء مريحة ومميزة.
+                    </p>
+                    <div class="btn-box">
+                      <a href="menu.html" class="btn1">
+                        اطلب الآن
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-7">
+                  <div class="img-box text-center">
+                    <img src="images/hero-bg.jpg" alt="مطعم زاد" class="img-fluid rounded-circle hero-image">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item ">
+            <div class="container ">
+              <div class="row align-items-center min-vh-75">
+                <div class="col-md-6 col-lg-5">
+                  <div class="detail-box">
+                    <h1>
+                      أطباق شهية
+                    </h1>
+                    <p>
+                      تذوق أفضل النكهات المحلية والعالمية في مكان واحد. كل طبق يحكي قصة من الإبداع والشغف بالطعام الأصيل.
+                    </p>
+                    <div class="btn-box">
+                      <a href="menu.html" class="btn1">
+                        تصفح القائمة
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-7">
+                  <div class="img-box text-center">
+                    <img src="images/f1.jpg" alt="أطباق شهية" class="img-fluid rounded-circle hero-image">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container ">
+              <div class="row align-items-center min-vh-75">
+                <div class="col-md-6 col-lg-5">
+                  <div class="detail-box">
+                    <h1>
+                      خدمة مميزة
+                    </h1>
+                    <p>
+                      نضمن لك تجربة استثنائية مع فريق عمل محترف يهتم بأدق التفاصيل لضمان راحتك ورضاك التام.
+                    </p>
+                    <div class="btn-box">
+                      <a href="about.html" class="btn1">
+                        اعرف أكثر
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-7">
+                  <div class="img-box text-center">
+                    <img src="images/about-img.jpg" alt="خدمة مميزة" class="img-fluid rounded-circle hero-image">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <ol class="carousel-indicators">
+            <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+            <li data-target="#customCarousel1" data-slide-to="1"></li>
+            <li data-target="#customCarousel1" data-slide-to="2"></li>
+          </ol>
+        </div>
+      </div>
+
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- offer section -->
+
+  <section class="offer_section layout_padding-bottom">
+    <div class="offer_container">
+      <div class="container ">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="box ">
+              <div class="img-box">
+                <img src="images/طبق مشكل كبير.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  طبق مشكل كبير
+                </h5>
+                <p style="font-size: 14px; color: #ddd; margin: 10px 0; line-height: 1.4;">
+                  تشكيلة مميزة من المحاشي والمقبلات الشامية في طبق واحد لعشاق التنوع.
+                </p>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin: 15px 0;">
+                  <h6 style="margin: 0;">
+                    <span>25%</span> خصم
+                  </h6>
+                  <h6 style="margin: 0; color: #ffbe33; font-weight: bold;">
+                    550 ج
+                  </h6>
+                </div>
+                <a href="#" class="add-to-cart-btn" data-name="طبق مشكل كبير" data-price="550" data-image="images/طبق مشكل كبير.jpg">
+                  اطلب الآن <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                    <g>
+                      <g>
+                        <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                     c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                     C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                     c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                     C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                     c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                      </g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box ">
+              <div class="img-box">
+                <img src="images/o2.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  عرض 3 أطباق
+                </h5>
+                <p style="font-size: 14px; color: #ddd; margin: 10px 0; line-height: 1.4;">
+                  طبقين كبار (واحد ورق عنب وواحد مشكل) + طبق فتة وسط
+                </p>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin: 15px 0;">
+                  <h6 style="margin: 0;">
+                    <span>وفر</span> أكثر
+                  </h6>
+                  <h6 style="margin: 0; color: #ffbe33; font-weight: bold;">
+                    1100 ج فقط
+                  </h6>
+                </div>
+                <a href="#" class="add-to-cart-btn" data-name="عرض 3 أطباق" data-price="1100" data-image="images/o2.jpg">
+                  اطلب الآن <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                    <g>
+                      <g>
+                        <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                     c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                     C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                     c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                     C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                     c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                      </g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="box ">
+              <div class="img-box">
+                <img src="images/عرض305.jpg" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  عرض الـ305
+                </h5>
+                <p style="font-size: 14px; color: #ddd; margin: 10px 0; line-height: 1.4;">
+                  طبق ورق عنب وطبق فتة صغيرين - مثالي للوجبات الخفيفة
+                </p>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin: 15px 0;">
+                  <h6 style="margin: 0;">
+                    <span>سعر</span> مميز
+                  </h6>
+                  <h6 style="margin: 0; color: #ffbe33; font-weight: bold;">
+                    305 ج
+                  </h6>
+                </div>
+                <a href="#" class="add-to-cart-btn" data-name="عرض الـ305" data-price="305" data-image="images/عرض305.jpg">
+                  اطلب الآن <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                    <g>
+                      <g>
+                        <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                     c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                     C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                     c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                     C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                     c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                      </g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end offer section -->
+
+  <!-- food section -->
+
+  <section class="food_section layout_padding-bottom">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Our Menu
+        </h2>
+      </div>
+
+      <ul class="filters_menu">
+        <li class="active" data-filter="*">All</li>
+        <li data-filter=".قسم ورق العنب">قسم ورق العنب</li>
+        <li data-filter=".قسم المحاشيa">قسم المحاشي</li>
+        <li data-filter=".قسم الكبة والسمبوسة">قسم الكبة والسمبوسة</li>
+        <li data-filter=".قسم السلطات">قسم السلطات</li>
+        <li data-filter=".قسم العروض والأطباق المشكلة (ميكس)">قسم العروض والأطباق المشكلة (ميكس)</li>
+      </ul>
+
+      <div class="filters-content">
+        <div class="row grid">
+          <div class="col-sm-6 col-lg-4 all pizza">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/o2.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    ورق عنب بدبس الرمان - كبير: 55 قطعة
+                  </h5>
+                  <p>
+                     مثالي للعائلات والضيوف، ورق عنب محشو بأفضل المكونات
+                  </p>
+                  <div class="options">
+                    <h6>
+                      500 ج
+                    </h6>
+                    <a href="#" class="add-to-cart-btn" data-name="ورق عنب بدبس الرمان - كبير" data-price="500" data-image="images/o2.jpg">
+                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                        <g>
+                          <g>
+                            <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                         c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                          </g>
+                        </g>
+                        <g>
+                          <g>
+                            <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                         C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                         c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                         C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                          </g>
+                        </g>
+                        <g>
+                          <g>
+                            <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                         c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                          </g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all burger">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/f3.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    ورق عنب بدبس الرمان - متوسط: 30 قطعة
+                  </h5>
+                  <p>
+                    يكفي لشخصين، أوراق عنب محشوة بالأرز والخضروات مع دبس الرمان. (270 ج)
+                  </p>
+                  <div class="options">
+                    <h6>
+                      270 ج
+                    </h6>
+                    <a href="#" class="add-to-cart-btn" data-name="ورق عنب بدبس الرمان - متوسط" data-price="270" data-image="images/f3.jpg">
+                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                        <g>
+                          <g>
+                            <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                         c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                          </g>
+                        </g>
+                        <g>
+                          <g>
+                            <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                         C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                         c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                         C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                          </g>
+                        </g>
+                        <g>
+                          <g>
+                            <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                         c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                          </g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all pizza">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/f3.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    ورق عنب بدبس الرمان - صغير: 15 قطعة
+                  </h5>
+                  <p>
+                    أوراق عنب طازجة محشوة بالأرز والخضروات مع نكهة دبس الرمان المميزة. (190 ج)
+                  </p>
+                  <div class="options">
+                    <h6>
+                      190 ج
+                    </h6>
+                    <a href="#" class="add-to-cart-btn" data-name="ورق عنب بدبس الرمان - صغير" data-price="190" data-image="images/f3.jpg">
+                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                        <g>
+                          <g>
+                            <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                         c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                          </g>
+                        </g>
+                        <g>
+                          <g>
+                            <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                         C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                         c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                         C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                          </g>
+                        </g>
+                        <g>
+                          <g>
+                            <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                         c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                          </g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all pasta">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/f4.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    فتة ورق عنب - صغير
+                  </h5>
+                  <p>
+                    حصة فردية - ورق عنب مفروم مع الخبز المحمص  والزبادى 
+                  </p>
+                  <div class="options">
+                    <h6>
+                      170 ج
+                    </h6>
+                    <a href="#" class="add-to-cart-btn" data-name="فتة ورق عنب - صغير" data-price="170" data-image="images/f4.jpg">
+                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                        <g>
+                          <g>
+                            <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                         c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                          </g>
+                        </g>
+                        <g>
+                          <g>
+                            <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                         C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                         c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                         C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                          </g>
+                        </g>
+                        <g>
+                          <g>
+                            <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                         c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                          </g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all fries">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/f5.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    فتة ورق عنب - كبير
+                  </h5>
+                  <p>
+                    تكفى لشخصين وثلاثه - ورق عنب مفروم مع الخبز المحمص  والزبادى 
+                  </p>
+                  <div class="options">
+                    <h6>
+                      240 ج
+                    </h6>
+                    <a href="#" class="add-to-cart-btn" data-name="فتة ورق عنب - كبير" data-price="240" data-image="images/f5.png">
+                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                        <g>
+                          <g>
+                            <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                         c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                          </g>
+                        </g>
+                        <g>
+                          <g>
+                            <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                         C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                         c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                         C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                          </g>
+                        </g>
+                        <g>
+                          <g>
+                            <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                         c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                          </g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all pizza">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/f4.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    ورق عنب بالليمون صغير 15 قطعه
+                  </h5>
+                  <p>
+                    صغير: 15 قطعة - نكهة منعشة ولذيذة، أوراق عنب محشوة بنكهة الليمون المنعشة. 
+                  </p>
+                  <div class="options">
+                    <h6>
+                      190 ج
+                    </h6>
+                    <a href="#" class="add-to-cart-btn" data-name="ورق عنب بالليمون - صغير" data-price="190" data-image="images/f4.jpg">
+                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                        <g>
+                          <g>
+                            <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                         c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                          </g>
+                        </g>
+                        <g>
+                          <g>
+                            <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                         C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                         c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                         C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                          </g>
+                        </g>
+                        <g>
+                          <g>
+                            <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                         c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                          </g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all burger">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/f7.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                     ورق عنب بالليمون وسط
+                  </h5>
+                  <p>
+                    كبير: 30 قطعة - نكهة منعشة ولذيذة، أوراق عنب محشوة بنكهة الليمون المنعشة. (340 ج)
+                  <div class="options">
+                    <h6>
+                      340 ج
+                    </h6>
+                    <a href="">
+                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                        <g>
+                          <g>
+                            <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                         c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                          </g>
+                        </g>
+                        <g>
+                          <g>
+                            <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                         C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                         c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                         C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                          </g>
+                        </g>
+                        <g>
+                          <g>
+                            <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                         c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                          </g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all burger">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/f8.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    كوسا لبنايه
+                  </h5>
+                  <p>
+                    كوسا محشية باللحمة والأرز مطبوخة باللبن الرائب والنعناع على الطريقة اللبنانية. (180 ج)
+                  </p>
+                  <div class="options">
+                    <h6>
+                      180 ج
+                    </h6>
+                    <a href="">
+                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                        <g>
+                          <g>
+                            <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                         c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                          </g>
+                        </g>
+                        <g>
+                          <g>
+                            <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                         C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                         c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                         C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                          </g>
+                        </g>
+                        <g>
+                          <g>
+                            <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                         c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                          </g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all pasta">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/f9.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>
+                    طبق ملفوف محشي
+                  </h5>
+                  <p>
+                    ملفوف محشي بالأرز والخضار على الطريقة المصرية الأصيلة. (180 ج)
+                  </p>
+                  <div class="options">
+                    <h6>
+                      180 ج
+                    </h6>
+                    <a href="">
+                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                        <g>
+                          <g>
+                            <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
+                         c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
+                          </g>
+                        </g>
+                        <g>
+                          <g>
+                            <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
+                         C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
+                         c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
+                         C457.728,97.71,450.56,86.958,439.296,84.91z" />
+                          </g>
+                        </g>
+                        <g>
+                          <g>
+                            <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
+                         c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
+                          </g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                        <g>
+                        </g>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-box">
+        <a href="menu.html">
+          شاهد المزيد
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- end food section -->
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container  ">
+
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="images/about-img.png" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                We Are زاد
+              </h2>
+            </div>
+            <p>
+              "في مطعم زاد، نأخذكم في رحلة إلى قلب المطبخ الشامي والمصري الأصيل. نحن متخصصون في تقديم أشهى المحاشي والأطباق التقليدية التي تُحضر بشغف وحب، باستخدام أجود المكونات الطازجة لضمان مذاق بيتي لا يُنسى. كل طبق لدينا هو حكاية من التراث نقدمها لكم."
+            </p>
+            <a href="">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- client section -->
+
+  <section class="client_section layout_padding-bottom">
+    <div class="container">
+      <div class="heading_container heading_center psudo_white_primary mb_45">
+        <h2>
+          آراء عملائنا
+        </h2>
+      </div>
+      <div class="carousel-wrap row ">
+        <div class="owl-carousel client_owl-carousel">
+          <div class="item">
+            <div class="box">
+              <div class="detail-box">
+                <p>
+                  طعم رائع وخدمة ممتازة! المحاشي لذيذة جداً والتوصيل سريع. بالتأكيد سأطلب مرة أخرى من مطعم زاد
+                </p>
+                <h6>
+                  ريم طارق
+                </h6>
+                <p>
+                  عميلة مميزة
+                </p>
+              </div>
+              <div class="video-box" style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden; background: #ffbe33; cursor: pointer; position: relative;">
+                <video src="images/video1.mp4" alt="ريم طارق" class="box-img" style="width: 100%; height: 100%; object-fit: cover;" muted preload="metadata"></video>
+                <div class="play-button" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255,255,255,0.8); border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #333;">
+                  ▶
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <div class="detail-box">
+                <p>
+                  أفضل مطعم محاشي جربته! الورق عنب والكوسا محشي لذيذ جداً والأسعار معقولة. أنصح الجميع بتجربة مطعم زاد
+                </p>
+                <h6>
+                  هايدي
+                </h6>
+                <p>
+                  عميلة مميزه
+                </p>
+              </div>
+              <div class="video-box" style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden; background: #ffbe33; cursor: pointer; position: relative;">
+                <video src="images/video2.mp4" alt="هايدي" class="box-img" style="width: 100%; height: 100%; object-fit: cover;" muted preload="metadata"></video>
+                <div class="play-button" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255,255,255,0.8); border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #333;">
+                  ▶
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end client section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 footer-col">
+          <div class="footer_contact">
+            <h4>
+              Contact Us
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Location
+                </span>
+              </a>
+              <a href="tel:01105642820">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  📞 اتصل للحجز السريع - 01105642820
+                </span>
+              </a>
+              <a href="https://wa.me/2001105642820">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                <span>
+                  راسلنا على واتساب
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 footer-col">
+          <div class="footer_detail">
+            <a href="#" class="footer-logo" id="adminAccess" onclick="checkAdminAccess(event)">
+              زاد
+            </a>
+            <p>
+              مطعم زاد يقدم أشهى المحاشي والمأكولات العربية الأصيلة بطعم البيت، مع خدمة توصيل سريعة وجودة عالية في كل طبق نقدمه لكم
+            </p>
+            <div class="footer_social">
+              <a href="https://www.facebook.com/MahashiZad" target="_blank">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.tiktok.com/@mahashizad?_t=ZS-8zcKSz4lShI&_r=1" target="_blank">
+                <i class="fa fa-music" aria-hidden="true" title="TikTok"></i>
+              </a>
+              <a href="https://wa.me/2001105642820" target="_blank">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.instagram.com/mahashi.zad?igsh=dmp0c3J6ZmozZDAw" target="_blank">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="tel:01105642820">
+                <i class="fa fa-phone" aria-hidden="true" title="اتصل الآن"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 footer-col">
+          <h4>
+            Opening Hours
+          </h4>
+          <p>
+            Everyday
+          </p>
+          <p>
+            10.00 Am -10.00 Pm
+          </p>
+        </div>
+      </div>
+      <div class="footer-info">
+        <p>
+          &copy; <span id="displayYear"></span> All Rights Reserved By
+          <a href="https://html.design/">Free Html Templates</a><br><br>
+          &copy; <span id="displayYear"></span> Distributed By
+          <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- isotope js -->
+  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+  <!-- nice select -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+  <!-- Socket.IO -->
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <!-- API Service -->
+  <script src="js/api.js"></script>
+  <!-- Cart System (must load before custom.js) -->
+  <script src="js/cart.js"></script>
+  <!-- Menu Dynamic Updates -->
+  <script src="js/menu-dynamic.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+  
+  <!-- Admin Access Script -->
+  <script>
+    let adminClickCount = 0;
+    let adminClickTimer = null;
+    
+    function checkAdminAccess(event) {
+      event.preventDefault();
+      adminClickCount++;
+      
+      // إعادة تعيين العداد بعد 3 ثوان
+      if (adminClickTimer) {
+        clearTimeout(adminClickTimer);
+      }
+      
+      adminClickTimer = setTimeout(() => {
+        adminClickCount = 0;
+      }, 3000);
+      
+      // إذا تم الضغط 5 مرات، فتح لوحة التحكم
+      if (adminClickCount === 5) {
+        adminClickCount = 0;
+        
+        // تأثير بصري
+        const logo = document.getElementById('adminAccess');
+        logo.style.color = '#ffbe33';
+        logo.style.transform = 'scale(1.2)';
+        
+        setTimeout(() => {
+          logo.style.color = '';
+          logo.style.transform = '';
+          window.location.href = 'admin-real.html';
+        }, 500);
+      }
+      
+      // إعطاء تلميح بصري عند كل ضغطة
+      if (adminClickCount > 0 && adminClickCount < 5) {
+        const logo = document.getElementById('adminAccess');
+        logo.style.color = '#ffbe33';
+        logo.style.transition = 'all 0.3s ease';
+        
+        setTimeout(() => {
+          logo.style.color = '';
+        }, 200);
+      }
+    }
+    
+    // إنشاء العربة
+    const cart = new ShoppingCart();
+    
+    // دالة إضافة للعربة من الصفحة الرئيسية
+    function addToCartFromHome(name, price, image) {
+      try {
+        console.log('🛒 إضافة للعربة:', { name, price, image });
+        
+        if (!cart) {
+          console.error('❌ خطأ: نظام العربة غير متاح');
+          return;
+        }
+        
+        if (!name || !price) {
+          console.error('❌ خطأ: بيانات المنتج غير مكتملة');
+          return;
+        }
+        
+        cart.addItem(name, price, image);
+        
+        // إشعار جميل
+        showAddToCartNotification(name);
+        
+        console.log('✅ تم إضافة المنتج بنجاح:', name);
+      } catch (error) {
+        console.error('❌ خطأ في إضافة المنتج:', error);
+      }
+    }
+    
+    function showAddToCartNotification(itemName) {
+      // إنشاء إشعار
+      const notification = document.createElement('div');
+      notification.innerHTML = `
+        <div style="position: fixed; top: 20px; right: 20px; background: linear-gradient(135deg, #28a745, #20c997); color: white; padding: 15px 20px; border-radius: 10px; z-index: 9999; box-shadow: 0 4px 15px rgba(0,0,0,0.2); font-family: Cairo, sans-serif; max-width: 300px;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <i class="fa fa-check-circle" style="font-size: 20px;"></i>
+            <div>
+              <div style="font-weight: bold;">تم الإضافة للعربة! 🛒</div>
+              <div style="font-size: 12px; opacity: 0.9;">${itemName}</div>
+            </div>
+          </div>
+          <div style="margin-top: 10px; text-align: center;">
+            <a href="checkout.html" style="background: rgba(255,255,255,0.2); color: white; padding: 5px 15px; border-radius: 20px; text-decoration: none; font-size: 12px; display: inline-block;">
+              اذهب للدفع
+            </a>
+          </div>
+        </div>
+      `;
+      
+      document.body.appendChild(notification);
+      
+      // تحديث أيقونة العربة
+      updateCartIconIndex();
+      
+      // إزالة الإشعار بعد 4 ثوان
+      setTimeout(() => {
+        notification.remove();
+      }, 4000);
+    }
+    
+    function updateCartIconIndex() {
+      const cartIcon = document.getElementById('cartCountIndex');
+      if (cartIcon && cart) {
+        const itemCount = cart.getTotalItems();
+        if (itemCount > 0) {
+          cartIcon.textContent = itemCount;
+          cartIcon.style.display = 'flex';
+        } else {
+          cartIcon.style.display = 'none';
+        }
+      }
+    }
+    
+    // تحديث أيقونة العربة عند تحميل الصفحة
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('🔥 DOM تم تحميله');
+      
+      // التحقق من وجود كلاس ShoppingCart
+      if (typeof ShoppingCart !== 'undefined') {
+        console.log('✅ ShoppingCart متاح');
+      } else {
+        console.error('❌ ShoppingCart غير متاح');
+      }
+      
+      setTimeout(updateCartIconIndex, 100);
+      
+      // إضافة event listeners آمنة لجميع أزرار العربة
+      const cartButtons = document.querySelectorAll('.add-to-cart-btn');
+      console.log('🛒 تم العثور على', cartButtons.length, 'أزرار عربة');
+      
+      cartButtons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          console.log('🎯 تم الضغط على زرار العربة');
+          
+          const name = this.dataset.name;
+          const price = parseFloat(this.dataset.price);
+          const image = this.dataset.image;
+          
+          console.log('📦 بيانات المنتج:', { name, price, image });
+          
+          if (name && price && image) {
+            addToCartFromHome(name, price, image);
+          } else {
+            console.error('❌ بيانات منتج غير مكتملة');
+          }
+        });
+      });
+      
+      // إضافة event listener لزرار Order Online
+      const orderBtn = document.getElementById('orderOnlineBtn');
+      if (orderBtn) {
+        orderBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          window.location.href = 'menu.html';
+        });
+      }
+      
+      // إضافة event listeners للمنتجات المتبقية في المنيو
+      document.querySelectorAll('.food_section .box').forEach(box => {
+        const h5 = box.querySelector('h5');
+        const link = box.querySelector('a[href=""]');
+        
+        if (h5 && link) {
+          const productName = h5.textContent.trim();
+          let productData = null;
+          
+          // تحديد بيانات المنتج
+          if (productName.includes('ورق عنب بالليمون وسط') || productName.includes('ورق عنب بالليمون - كبير')) {
+            productData = { name: 'ورق عنب بالليمون - كبير', price: 340, image: 'images/f7.png' };
+          } else if (productName.includes('كوسا لبنايه')) {
+            productData = { name: 'كوسا لبنايه', price: 180, image: 'images/f8.jpg' };
+          } else if (productName.includes('طبق ملفوف محشي')) {
+            productData = { name: 'طبق ملفوف محشي', price: 180, image: 'images/f9.png' };
+          }
+          
+          // إضافة event listener آمن
+          if (productData) {
+            link.href = '#';
+            link.addEventListener('click', function(e) {
+              e.preventDefault();
+              addToCartFromHome(productData.name, productData.price, productData.image);
+            });
+          }
+        }
+      });
+    });
+    
+    // التحكم في الفيديوهات
+    document.addEventListener('DOMContentLoaded', function() {
+      const videoBoxes = document.querySelectorAll('.video-box');
+      
+      videoBoxes.forEach(box => {
+        const video = box.querySelector('video');
+        const playButton = box.querySelector('.play-button');
+        
+        // عند الضغط على أي مكان في الصندوق
+        box.addEventListener('click', function() {
+          if (video.paused) {
+            // إيقاف كل الفيديوهات الأخرى
+            videoBoxes.forEach(otherBox => {
+              const otherVideo = otherBox.querySelector('video');
+              const otherPlayButton = otherBox.querySelector('.play-button');
+              if (otherVideo !== video) {
+                otherVideo.pause();
+                otherVideo.currentTime = 0;
+                otherPlayButton.style.display = 'flex';
+                otherPlayButton.innerHTML = '▶';
+              }
+            });
+            
+            // تشغيل الفيديو المضغوط
+            video.play();
+            playButton.style.display = 'none';
+          } else {
+            video.pause();
+            playButton.style.display = 'flex';
+            playButton.innerHTML = '▶';
+          }
+        });
+        
+        // عند انتهاء الفيديو
+        video.addEventListener('ended', function() {
+          playButton.style.display = 'flex';
+          playButton.innerHTML = '▶';
+        });
+        
+        // تأثير hover
+        box.addEventListener('mouseenter', function() {
+          this.style.transform = 'scale(1.05)';
+          this.style.transition = 'transform 0.3s ease';
+          playButton.style.background = 'rgba(255,190,51,0.9)';
+        });
+        
+        box.addEventListener('mouseleave', function() {
+          this.style.transform = 'scale(1)';
+          playButton.style.background = 'rgba(255,255,255,0.8)';
+        });
+      });
+    });
+  </script>
+  
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+
+</body>
+
+</html>

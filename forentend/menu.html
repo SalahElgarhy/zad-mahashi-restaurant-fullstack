@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+
+  <title> زاد </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- nice select -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <!-- cart style -->
+  <link href="css/cart.css" rel="stylesheet" />
+
+  <style>
+    /* تحسين النافيجيشن - لون داكن وغامق */
+    .header_section {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 2px solid #ffbe33;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .navbar-brand span {
+      color: #ffbe33 !important;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      font-weight: 700 !important;
+    }
+    
+    .custom_nav-container .navbar-nav .nav-item .nav-link {
+      color: #ffffff !important;
+      font-weight: 600 !important;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    
+    .custom_nav-container .navbar-nav .nav-item:hover .nav-link,
+    .custom_nav-container .navbar-nav .nav-item.active .nav-link {
+      color: #ffbe33 !important;
+      transform: translateY(-2px);
+    }
+    
+    .user_option .user_link {
+      color: #ffffff !important;
+    }
+    
+    .user_option .user_link:hover {
+      color: #ffbe33 !important;
+    }
+    
+    .user_option .cart_link svg {
+      fill: #ffffff !important;
+    }
+    
+    .user_option .cart_link:hover svg {
+      fill: #ffbe33 !important;
+    }
+    
+    .user_option .order_online {
+      background: linear-gradient(135deg, #ffbe33 0%, #f0a500 100%) !important;
+      box-shadow: 0 4px 15px rgba(255, 190, 51, 0.4) !important;
+    }
+    
+    /* تنسيق فلاتر المينو */
+    .filters_menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 50px;
+      padding: 0;
+      list-style: none;
+    }
+    
+    .filters_menu li {
+      background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+      color: #ffffff;
+      padding: 12px 25px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      font-weight: 600;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .filters_menu li:hover {
+      background: linear-gradient(135deg, #ffbe33 0%, #f0a500 100%);
+      color: #222831;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(255, 190, 51, 0.4);
+      border-color: #ffbe33;
+    }
+    
+    .filters_menu li.active {
+      background: linear-gradient(135deg, #ffbe33 0%, #f0a500 100%);
+      color: #222831;
+      border-color: #ffbe33;
+      box-shadow: 0 6px 20px rgba(255, 190, 51, 0.4);
+    }
+  </style>
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <div class="bg-box">
+      <img src="images/hero-bg.jpg" alt="">
+    </div>
+    <!-- header section starts -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            <span>زاد</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">الرئيسية</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="menu.html">القائمة <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">من نحن</a>
+              </li>
+            </ul>
+            <div class="user_option">
+              <a href="" class="user_link">
+                <i class="fa fa-user" aria-hidden="true"></i>
+              </a>
+              <a class="cart_link" href="#" style="position: relative;">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <span id="navCartCount" style="position: absolute; top: -8px; right: -8px; background: #ff4444; color: white; border-radius: 50%; width: 18px; height: 18px; text-align: center; font-size: 10px; line-height: 18px; display: none;">0</span>
+              </a>
+              <form class="form-inline">
+                <button class="btn my-2 my-sm-0 nav_search-btn" type="submit">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+              <a href="" class="order_online">Order Online</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- food section -->
+  <section class="food_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>Our Menu</h2>
+      </div>
+
+      <ul class="filters_menu">
+        <li class="active" data-filter="*">All</li>
+        <li data-filter=".grape">قسم ورق العنب</li>
+        <li data-filter=".stuffed">قسم المحاشي</li>
+        <li data-filter=".kebabs">قسم الكبة والسمبوسة</li>
+        <li data-filter=".salads">سلطات</li>
+        <li data-filter=".mix">قسم الميكس</li>
+        <li data-filter=".drinks">قسم المشروبات</li>
+      </ul>
+
+      <div class="filters-content">
+        <div class="row grid">
+          <!-- Grape Section -->
+          <div class="col-sm-6 col-lg-4 all grape">
+            <div class="box" data-item-id="grape-small">
+              <div>
+                <div class="img-box">
+                  <img src="images/f7.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>ورق عنب بدبس الرمان - صغير</h5>
+                  <p>15 قطعة - أوراق عنب طازجة محشوة بالأرز والخضروات مع نكهة دبس الرمان المميزة.</p>
+                  <div class="options">
+                    <h6 class="item-price">190 ج</h6>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all grape">
+            <div class="box" data-item-id="fattet-grape">
+              <div>
+                <div class="img-box">
+                  <img src="images/f4.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>فتة ورق عنب - صغير</h5>
+                  <p>حصة فردية - ورق عنب مفروم مع الخبز المحمص والزبادى الشهية</p>
+                  <div class="options">
+                    <h6 class="item-price">170 ج</h6>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all grape">
+            <div class="box" data-item-id="grape-large">
+              <div>
+                <div class="img-box">
+                  <img src="images/o2.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>ورق عنب بدبس الرمان كبير</h5>
+                  <p>كبير: 55 قطعة - مثالي للعائلات والضيوف، ورق عنب محشو بأفضل المكونات</p>
+                  <div class="options">
+                    <h6 class="item-price">500 ج</h6>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all grape">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/f7.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>ورق عنب بدبس الرمان وسط</h5>
+                  <p>متوسط: 30 قطعة - يكفي لشخصين، أوراق عنب محشوة بالأرز والخضروات مع دبس الرمان</p>
+                  <div class="options">
+                    <h6>270 ج</h6>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all grape">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/f5.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>فتة ورق عنب - كبير</h5>
+                  <p>يكفي لشخصين وثلاثة - ورق عنب مفروم مع الخبز المحمص والزبادى الشهية</p>
+                  <div class="options">
+                    <h6>240 ج</h6>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all grape">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/f3.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>ورق عنب بالليمون</h5>
+                  <p>صغير: 15 قطعة - نكهة منعشة ولذيذة، أوراق عنب محشوة بنكهة الليمون المنعشة</p>
+                  <div class="options">
+                    <h6>190 ج</h6>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all grape">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/f7.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>ورق عنب بالليمون - كبير</h5>
+                  <p>30 قطعة - نكهة منعشة ولذيذة، أوراق عنب محشوة بنكهة الليمون المنعشة</p>
+                  <div class="options">
+                    <h6>340 ج</h6>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stuffed Section -->
+          <div class="col-sm-6 col-lg-4 all stuffed">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/f8.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>كوسا لبنايه</h5>
+                  <p>كوسا محشية الأرز مطبوخة باللبن الرائب على الطريقة اللبنانية</p>
+                  <div class="options">
+                    <h6>180 ج</h6>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all stuffed">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/mlfof.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>طبق ملفوف محشي</h5>
+                  <p>ملفوف محشي بالأرز والخضار على الطريقة المصرية الأصيلة</p>
+                  <div class="options">
+                    <h6>180 ج</h6>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all stuffed">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/kosa.JPEG" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>كوسا محشي بالأرز</h5>
+                  <p>كوسا محشية بالأرز والخضروات الطازجة على الطريقة الشامية الأصيلة</p>
+                  <div class="options">
+                    <h6>190 ج</h6>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all stuffed">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/basl.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>طبق بصل محشي</h5>
+                  <p>بصل محشي بالأرز على الطريقة المصرية الأصيلة</p>
+                  <div class="options">
+                    <h6>170 ج</h6>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all stuffed">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/mkdos.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>مكدوس شامي - 600 جرام</h5>
+                  <p>اذنجان محشو بالجوز والفلفل الأحمر والثوم على الطريقة الشامية الأصيلة</p>
+                  <div class="options">
+                    <h6>220 ج</h6>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all stuffed">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/mshakl kbear.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>طبق مشكل كبير</h5>
+                  <p>تشكيلة مميزة من المحاشي والمقبلات الشامية في طبق واحد لعشاق التنوع</p>
+                  <div class="options">
+                    <h6>550 ج</h6>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kebabs Section -->
+          <div class="col-sm-6 col-lg-4 all kebabs">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/kba.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>كبة سورية لحمة - صغير</h5>
+                  <p>10 قطع - كبة سورية طازجة محشوة باللحمة المفرومة والبرغل الناعم</p>
+                  <div class="options">
+                    <h6>150 ج</h6>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all kebabs">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/smposa.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>سمبوسة لحمة</h5>
+                  <p>سمبوسة مقرمشة محشوة باللحمة المتبلة - مقبلات خفيفة ولذيذة</p>
+                  <div class="options">
+                    <h6>170 ج</h6>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all kebabs">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/kba.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>كبة سورية لحمة - متوسط</h5>
+                  <p>كبة سورية أصيلة محشوة باللحمة المفرومة والتوابل</p>
+                  <div class="options">
+                    <h6>300 ج</h6>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Salads Section -->
+          <div class="col-sm-6 col-lg-4 all salads">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/tbola.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>سلطة التبولة</h5>
+                  <p>بقدونس مفروم ناعم مع الطماطم والليمون والنعناع - سلطة لبنانية منعشة</p>
+                  <div class="options">
+                    <h6>90 ج</h6>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all salads">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/ftosh.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>سلطة الفتوش</h5>
+                  <p>سلطة لبنانية منعشة بالخضروات الطازجة، الخبز المحمص، وصوص الرمان</p>
+                  <div class="options">
+                    <h6>95 ج</h6>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mix Section -->
+          <div class="col-sm-6 col-lg-4 all mix">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/defakbera.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>أطباق الضيافة - كبير</h5>
+                  <p>تشكيلة كاملة من جميع الأصناف المحشوة - للمناسبات الكبيرة والعزائم</p>
+                  <div class="options">
+                    <h6>700 ج</h6>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all mix">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/hero-bg.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>عرض ال3 بوكسات الكبير</h5>
+                  <p>بوكس ورق عنب كبير + بوكس ميكس كبير + بوكس فته وسط</p>
+                  <div class="options">
+                    <h6>1100 ج</h6>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all mix">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/3box.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>عرض ال3 بوكسات صغير</h5>
+                  <p>عباره عن 3 اطباق ورق عنب بالرومان + طبق بالفلفل + طبق بالليمون</p>
+                  <div class="options">
+                    <h6>350 ج</h6>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all mix">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/2box.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>عرض الطبقين</h5>
+                  <p>العرض طبقين واحد ورق عنب + طبق فته</p>
+                  <div class="options">
+                    <h6>305 ج</h6>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drinks Section -->
+          <div class="col-sm-6 col-lg-4 all drinks">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/pepsi.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>بيبسي كولا</h5>
+                  <p>مشروب البيبسي كولا الطازج والمنعش - عبوة 330 مل</p>
+                  <div class="options">
+                    <h6>25 ج</h6>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all drinks">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/7up.jpg" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>سفن أب</h5>
+                  <p>مشروب السفن أب الطازج بنكهة الليمون المنعشة - عبوة 330 مل</p>
+                  <div class="options">
+                    <h6>25 ج</h6>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 all drinks">
+            <div class="box">
+              <div>
+                <div class="img-box">
+                  <img src="images/vcola.png" alt="">
+                </div>
+                <div class="detail-box">
+                  <h5>في كولا</h5>
+                  <p>مشروب الكولا الطبيعي بطعم مميز ومنعش - عبوة 330 مل</p>
+                  <div class="options">
+                    <h6>25 ج</h6>
+                    <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end food section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 footer-col">
+          <div class="footer_contact">
+            <h4>Contact Us</h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>Location</span>
+              </a>
+              <a href="tel:01105642820">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>📞 اتصل للحجز السريع - 01105642820</span>
+              </a>
+              <a href="https://wa.me/2001105642820">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                <span>راسلنا على واتساب</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 footer-col">
+          <div class="footer_detail">
+            <a href="#" class="footer-logo" id="adminAccess" onclick="checkAdminAccess(event)">زاد</a>
+            <p>مطعم زاد يقدم أشهى المحاشي والمأكولات العربية الأصيلة بطعم البيت، مع خدمة توصيل سريعة وجودة عالية في كل طبق نقدمه لكم</p>
+            <div class="footer_social">
+              <a href="https://www.facebook.com/MahashiZad" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href="https://www.tiktok.com/@mahashizad?_t=ZS-8zcKSz4lShI&_r=1" target="_blank"><i class="fa fa-music" aria-hidden="true" title="TikTok"></i></a>
+              <a href="https://wa.me/2001105642820" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+              <a href="https://www.instagram.com/mahashi.zad?igsh=dmp0c3J6ZmozZDAw" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a href="tel:01105642820" target="_blank"><i class="fa fa-phone" aria-hidden="true" title="اتصل الآن"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 footer-col">
+          <h4>Opening Hours</h4>
+          <p>Everyday</p>
+          <p>10.00 Am - 10.00 Pm</p>
+        </div>
+      </div>
+      <div class="footer-info">
+        <p>
+          &copy; <span id="displayYear"></span> All Rights Reserved By
+          <a href="https://html.design/">Free Html Templates</a><br><br>
+          &copy; <span id="displayYear"></span> Distributed By
+          <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQuery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- isotope js -->
+  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+  <!-- nice select -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+  <!-- Socket.IO -->
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <!-- API Service -->
+  <script src="js/api.js"></script>
+  <!-- Menu Dynamic Updates -->
+  <script src="js/menu-dynamic.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+  <!-- cart js -->
+  <script src="js/cart.js"></script>
+
+  <!-- Admin Access Script -->
+  <script>
+    let adminClickCount = 0;
+    let adminClickTimer = null;
+    
+    function checkAdminAccess(event) {
+      event.preventDefault();
+      adminClickCount++;
+      
+      // إعادة تعيين العداد بعد 3 ثوان
+      if (adminClickTimer) {
+        clearTimeout(adminClickTimer);
+      }
+      
+      adminClickTimer = setTimeout(() => {
+        adminClickCount = 0;
+      }, 3000);
+      
+      // إذا تم الضغط 5 مرات، فتح لوحة التحكم
+      if (adminClickCount === 5) {
+        adminClickCount = 0;
+        
+        // تأثير بصري
+        const logo = document.getElementById('adminAccess');
+        logo.style.color = '#ffbe33';
+        logo.style.transform = 'scale(1.2)';
+        
+        setTimeout(() => {
+          logo.style.color = '';
+          logo.style.transform = '';
+          window.location.href = 'admin-real.html';
+        }, 500);
+      }
+      
+      // إعطاء تلميح بصري عند كل ضغطة
+      if (adminClickCount > 0 && adminClickCount < 5) {
+        const logo = document.getElementById('adminAccess');
+        logo.style.color = '#ffbe33';
+        logo.style.transition = 'all 0.3s ease';
+        
+        setTimeout(() => {
+          logo.style.color = '';
+        }, 200);
+      }
+    }
+    
+    // إنشاء العربة
+    const cart = new ShoppingCart();
+    
+    // دالة إضافة للعربة (من menu-dynamic.js)
+    function addToCart(id, name, price, image) {
+        console.log('🛒 إضافة للعربة:', { id, name, price, image });
+        cart.addItem(name, price, image);
+    }
+  </script>
+  
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+</body>
+</html>

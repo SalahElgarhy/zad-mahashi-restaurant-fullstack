@@ -1,0 +1,151 @@
+# ===============================================
+# 🔒 SENSITIVE FILES - NEVER COMMIT THESE! 🔒
+# ===============================================
+
+# Environment variables (contains sensitive data)
+.env
+.env.local
+.env.production
+.env.development
+.env.staging
+.env.test
+
+# ⚠️ ADMIN PANEL FILES - HIGHLY SENSITIVE! ⚠️
+admin.html
+admin-access.html
+admin-*.html
+admin-real.html
+**/admin/**
+admin/
+order-system-guide.html
+
+# 📊 Admin and backup data (contains business data)
+admin-data.json
+backup-*.json
+menu-data.json
+orders-backup.json
+users-data.json
+
+# 🔐 Security and authentication files
+src/config/security.js
+src/utils/auth.js
+js/admin-backend.js
+js/auth.js
+config/auth.js
+config/security.js
+*.key
+*.pem
+*.crt
+*.csr
+certificates/
+keys/
+
+# 📱 Contact and personal information
+contacts.json
+phone-numbers.json
+personal-data.json
+
+# 💳 Payment and financial data
+payment-config.js
+billing-data.json
+transactions.json
+
+# 📧 Email and communication configs
+smtp-config.js
+email-templates/
+notifications-config.js
+
+# ===============================================
+# 📦 STANDARD EXCLUSIONS
+# ===============================================
+
+# Dependencies
+node_modules/
+bower_components/
+jspm_packages/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+logs/
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+.nyc_output
+
+# Build outputs
+dist/
+dist-ssr/
+build/
+out/
+*.local
+
+# Cache directories
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.vuepress/dist
+
+# IDE and Editor files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.backup
+*.bak
+*~
+
+# Local configuration
+config.local.js
+settings.local.js
+local-config.json
+
+# Test files
+test-data.json
+test-results/
+coverage-report/
+
+# Database files
+*.sqlite
+*.sqlite3
+*.db
+
+# Archive files
+*.zip
+*.rar
+*.7z
+*.tar.gz

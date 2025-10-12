@@ -1,0 +1,300 @@
+/* تصميم العربة */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.cart-item-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item-info img {
+    border-radius: 5px;
+}
+
+.cart-item-info h6 {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.cart-item-info p {
+    margin: 0;
+    color: #ffbe33;
+    font-weight: bold;
+}
+
+.cart-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item-controls input {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.cart-item-controls button {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+/* أيقونة العربة المُحدثة */
+#cartIcon {
+    transition: all 0.3s ease;
+}
+
+#cartIcon:hover {
+    transform: scale(1.1);
+    background: #e6a429 !important;
+}
+
+#cartCount {
+    animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-5px);
+    }
+    60% {
+        transform: translateY(-3px);
+    }
+}
+
+/* تحسين النوافذ المنبثقة */
+.modal-header {
+    background: #ffbe33;
+    color: white;
+}
+
+.modal-header .close {
+    color: white;
+    opacity: 1;
+}
+
+.modal-title {
+    font-weight: bold;
+}
+
+/* تحسين النماذج */
+.form-group label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-control:focus {
+    border-color: #ffbe33;
+    box-shadow: 0 0 0 0.2rem rgba(255, 190, 51, 0.25);
+}
+
+/* تحسين أزرار إضافة للعربة */
+.fa-shopping-cart {
+    transition: all 0.3s ease;
+}
+
+.fa-shopping-cart:hover {
+    transform: scale(1.2);
+    color: #ffbe33 !important;
+}
+
+/* رسائل النجاح */
+.alert-success {
+    border-radius: 5px;
+    border: none;
+    background: #28a745;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* تحسين الأسعار */
+#cartTotal, #finalTotal {
+    color: #ffbe33;
+    font-weight: bold;
+}
+
+/* تصميم نافذة بيانات الفيزا */
+#cardDetailsModal .modal-header {
+    background: #28a745;
+}
+
+#cardDetailsModal .form-control {
+    font-family: 'Courier New', monospace;
+}
+
+#cardDetailsModal input[name="card_number"] {
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+
+#cardDetailsModal input[name="expiry_date"],
+#cardDetailsModal input[name="cvv"] {
+    text-align: center;
+}
+
+#cardDetailsModal .alert-info {
+    border-left: 4px solid #17a2b8;
+    background: #f8f9fa;
+}
+
+/* أيقونات بطاقات الائتمان */
+.card-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.card-icons img {
+    height: 30px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.card-icons img:hover {
+    opacity: 1;
+}
+
+/* تصميم صفحة Checkout */
+.checkout-item {
+    transition: all 0.3s ease;
+}
+
+.checkout-item:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.payment-methods .form-check {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.payment-methods .form-check:hover {
+    border-color: #ffbe33;
+    background-color: #fff9e6;
+}
+
+.payment-methods .form-check-input:checked + .form-check-label {
+    color: #ffbe33;
+    font-weight: bold;
+}
+
+.payment-methods .form-check-input:checked {
+    background-color: #ffbe33;
+    border-color: #ffbe33;
+}
+
+.card-header {
+    background: #ffbe33;
+    color: white;
+    font-weight: bold;
+}
+
+.card-header h4 {
+    margin: 0;
+}
+
+#cardSection {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #28a745;
+}
+
+#cardSection h5 {
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+#cardSection input {
+    font-family: 'Courier New', monospace;
+}
+
+#cardSection input[name="card_number"] {
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+
+.checkout-item .item-controls button {
+    min-width: 35px;
+    height: 35px;
+}
+
+/* تحسين التصميم للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .checkout-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .checkout-item .item-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .checkout-item .item-controls {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* تصميم عداد العربة في الـ navigation */
+#navCartCount {
+    animation: bounce 0.5s ease-in-out;
+    font-weight: bold;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.cart_link:hover #navCartCount {
+    background: #ffbe33 !important;
+    border-color: #ff4444;
+}
+
+/* استجابة الشاشات الصغيرة */
+@media (max-width: 768px) {
+    #cartIcon {
+        bottom: 20px;
+        right: 15px;
+        padding: 12px;
+    }
+    
+    .cart-item {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .cart-item-controls {
+        justify-content: center;
+    }
+    
+    .modal-dialog {
+        margin: 10px;
+    }
+    
+    #navCartCount {
+        width: 16px;
+        height: 16px;
+        font-size: 9px;
+        line-height: 16px;
+        top: -6px;
+        right: -6px;
+    }
+}
