@@ -1,0 +1,32 @@
+{
+  "name": "zad-mahashi-fullstack",
+  "version": "1.0.0",
+  "description": "Full Stack Restaurant Management System - Frontend & Backend",
+  "main": "B/src/index.js",
+  "engines": {
+    "node": "18.x",
+    "npm": "8.x"
+  },
+  "scripts": {
+    "start": "cd B && npm start",
+    "build": "cd B && npm install",
+    "dev": "cd B && npm run dev",
+    "install-backend": "cd B && npm install",
+    "install-frontend": "cd forentend && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SalahElgarhy/zad-mahashi-restaurant-fullstack.git"
+  },
+  "keywords": [
+    "restaurant",
+    "nodejs", 
+    "mongodb",
+    "fullstack",
+    "express",
+    "socket.io"
+  ],
+  "author": "SalahElgarhy",
+  "license": "MIT",
+  "homepage": "https://github.com/SalahElgarhy/zad-mahashi-restaurant-fullstack#readme"
+}

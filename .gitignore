@@ -8,6 +8,16 @@ forendend/
 config.js
 *config.js
 
+# Node.js modules (مهم جداً!)
+node_modules/
+*/node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
 # ملفات البيئة العامة
 .env
 .env.local
