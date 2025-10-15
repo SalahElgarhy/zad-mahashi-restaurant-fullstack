@@ -24,7 +24,11 @@
     "mongodb",
     "fullstack",
     "express",
-    "socket.io"
+    "socket.io",
+    "aws",
+    "lambda",
+    "s3",
+    "cloudfront"
   ],
   "author": "SalahElgarhy",
   "license": "MIT",
