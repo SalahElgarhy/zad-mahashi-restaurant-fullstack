@@ -1,1 +1,0 @@
-web: node B/src/index.js

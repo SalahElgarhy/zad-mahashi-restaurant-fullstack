@@ -12,7 +12,8 @@
     "build": "cd B && npm install",
     "dev": "cd B && npm run dev",
     "install-backend": "cd B && npm install",
-    "install-frontend": "cd forentend && npm install"
+    "install-frontend": "cd forentend && npm install",
+    "render-deploy": "npm run build && npm start"
   },
   "repository": {
     "type": "git",

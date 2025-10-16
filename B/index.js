@@ -80,8 +80,21 @@ io.on('connection', (socket) => {
     await connectDB();
     await bootstrap(app, express, io);
 
+    // إضافة Static Files serving للـ Frontend
+    const path = await import('path');
+    const __dirname = path.dirname(new URL(import.meta.url).pathname);
+    
+    // خدمة ملفات Frontend
+    app.use(express.static(path.join(__dirname, '../forentend')));
+    
+    // Route للصفحة الرئيسية
+    app.get('/', (req, res) => {
+      res.sendFile(path.join(__dirname, '../forentend', 'index.html'));
+    });
+
     server.listen(PORT, () => {
-      console.log(`Server is running on http://localhost:${PORT}`);
+      console.log(`🚀 Server is running on http://localhost:${PORT}`);
+      console.log(`📁 Serving frontend from: ${path.join(__dirname, '../forentend')}`);
     });
   } catch (error) {
     console.error('❌ Failed to start server:', error);
