@@ -1,7 +1,24 @@
-// خدمة API بسيطة للتواصل مع الباك إند
+// خدمة API ذكية للتواصل مع الباك إند
 class APIService {
     constructor() {
-        this.baseURL = 'http://localhost:3000/api';
+        // انتظار تحميل Config
+        this.initializeAPI();
+    }
+
+    initializeAPI() {
+        // استخدام AppConfig الجديد
+        if (window.AppConfig) {
+            this.baseURL = window.AppConfig.API_BASE_URL;
+            console.log('🔗 API Service initialized with AppConfig:', this.baseURL);
+        } else {
+            console.warn('⚠️ AppConfig not loaded yet, using fallback');
+            this.baseURL = '/api'; // fallback آمن
+        }
+    }
+
+    // إعادة تهيئة API URL إذا تغير
+    refreshAPIUrl() {
+        this.initializeAPI();
     }
 
     // دالة عامة لطلبات API
@@ -26,20 +43,23 @@ class APIService {
             return data;
         } catch (error) {
             console.error('API Error:', error);
+            console.error('URL المحاولة:', url);
+            
+            // رسالة خطأ مفصلة للمطور
+            if (error.name === 'TypeError' && error.message.includes('fetch')) {
+                console.error('❌ فشل الاتصال بالخادم. تأكد من:');
+                console.error('1. تشغيل Backend على:', this.baseURL);
+                console.error('2. إعدادات CORS صحيحة');
+                console.error('3. الشبكة متاحة');
+            }
+            
             throw error;
         }
     }
 
     // جلب القائمة
     async getMenu() {
-        try {
-            const response = await fetch('http://localhost:3000/api/products');
-            const data = await response.json();
-            return data;
-        } catch (error) {
-            console.error('Error fetching menu:', error);
-            return [];
-        }
+        return await this.request('/products');
     }
 
     // إرسال طلب جديد

@@ -315,7 +315,14 @@ class ShoppingCart {
             
             console.log('📝 بيانات الطلب المحولة:', backendOrderData);
             
-            const response = await fetch('http://localhost:3000/api/orders', {
+            // استخدام AppConfig للحصول على URL الصحيح
+            const apiUrl = window.AppConfig ? 
+                window.AppConfig.getApiUrl('orders') : 
+                '/api/orders';
+            
+            console.log('🌐 إرسال الطلب إلى:', apiUrl);
+            
+            const response = await fetch(apiUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -323,17 +330,33 @@ class ShoppingCart {
                 body: JSON.stringify(backendOrderData)
             });
             
+            console.log('📡 Response Status:', response.status, response.statusText);
+            
+            if (!response.ok) {
+                console.error('❌ HTTP Error:', response.status);
+                const errorText = await response.text();
+                console.error('❌ Error Response:', errorText);
+                alert(`فشل في إرسال الطلب: ${response.status} ${response.statusText}`);
+                return;
+            }
+            
             const result = await response.json();
             console.log('✅ نتيجة إرسال الطلب:', result);
             
             if (result.success) {
                 console.log('🎉 تم إرسال الطلب بنجاح للباك إند');
+                console.log('📦 Order ID:', result._id);
+                console.log('💰 Total Price:', result.totalPrice);
+                console.log('📋 Status:', result.status);
             } else {
                 console.error('❌ فشل في إرسال الطلب:', result.message);
+                alert(`فشل في إرسال الطلب: ${result.message || 'خطأ غير معروف'}`);
             }
             
         } catch (error) {
             console.error('❌ خطأ في إرسال الطلب للباك إند:', error);
+            console.error('❌ Error Details:', error.message);
+            alert(`خطأ في الاتصال بالخادم: ${error.message}`);
         }
     }
 

@@ -3,10 +3,9 @@
 # حماية المجلدات والملفات الحساسة للمشروع الكامل
 # ===============================================
 
-# مجلدات تحتوي على بيانات حساسة
-forendend/
-config.js
-*config.js
+# ملفات حساسة محددة فقط (لا نتجاهل forendend كلها!)
+# forendend/ - ❌ لا تستخدم هذا!
+# config.js - نحتاجه في Frontend!
 
 # Node.js modules (مهم جداً!)
 node_modules/
@@ -98,30 +97,36 @@ test-data/
 mock-data/
 experiments/
 
-# ملفات الأدمن والإدارة
-admin.html
-admin-*.html
-dashboard.html
-management.html
-admin/
-dashboard/
-management/
+# ملفات الأدمن والإدارة (اخترنا الحماية بـ password بدل إخفاء الملفات)
+# admin.html - ❌ لا نتجاهلها، محمية بـ password
+# admin-*.html
+# dashboard.html
+# management.html
 
-# ملفات JavaScript الحساسة
-admin.js
-admin-*.js
-password-*.js
-secret-*.js
-auth-*.js
+# ملفات JavaScript الحساسة - نبقي فقط الملفات المهمة
+# admin.js - ❌ لا نتجاهلها
+password-generator.js
+B/src/utils/security.js
+*secret*.js
+*credentials*.js
 
 # ملفات خاصة بالنشر
 deployment/
 production/
 staging/
 
-# أي ملف يحتوي على معلومات حساسة
-*password*
-*secret*
-*admin*
-*private*
-*sensitive*
+# ملفات حساسة محددة فقط
+# *password* - ❌ واسع جداً
+# *secret* - ❌ واسع جداً  
+# *admin* - ❌ واسع جداً
+*private-key*
+*credentials*
+*sensitive-data*
+
+# استثناءات مهمة - لا تتجاهل هذه الملفات!
+!forentend/**
+!B/.env.example
+!B/.env.render
+!*.md
+!DEPLOYMENT_GUIDE.md
+!SETUP_GUIDE.md

@@ -4,6 +4,7 @@ import { io } from '../../index.js'; // استيراد io من index.js
 import { processCardPayment, refundPayment } from '../services/paymentService.js';
 
 export const createOrder = asyncHandler(async (req, res, next) => {
+    console.log('\n🆕 ========== طلب جديد وارد ==========');
     const { customerName, phoneNumber, address, notes, paymentMethod, items, status, cardDetails } = req.body;
     console.log('🔄 Received order data:', JSON.stringify(req.body, null, 2));
     console.log('💳 Payment method:', paymentMethod);
@@ -11,10 +12,22 @@ export const createOrder = asyncHandler(async (req, res, next) => {
     
     // التحقق من البيانات المطلوبة
     if (!customerName || !phoneNumber || !address || !items || !Array.isArray(items) || items.length === 0) {
+        console.error('❌ بيانات ناقصة في الطلب!');
+        console.error('❌ customerName:', customerName ? '✅' : '❌');
+        console.error('❌ phoneNumber:', phoneNumber ? '✅' : '❌');
+        console.error('❌ address:', address ? '✅' : '❌');
+        console.error('❌ items:', items && Array.isArray(items) ? `✅ (${items.length})` : '❌');
+        
         return res.status(400).json({ 
             success: false,
             message: 'Missing required fields',
-            required: ['customerName', 'phoneNumber', 'address', 'items']
+            required: ['customerName', 'phoneNumber', 'address', 'items'],
+            received: {
+                customerName: !!customerName,
+                phoneNumber: !!phoneNumber,
+                address: !!address,
+                items: items && Array.isArray(items) ? items.length : 0
+            }
         });
     }
 
@@ -79,16 +92,26 @@ export const createOrder = asyncHandler(async (req, res, next) => {
 
         const order = await Order.create(orderData);
 
-        console.log('✅ Order created successfully:', order._id);
+        console.log('✅ ========== الطلب تم إنشاؤه بنجاح! ==========');
+        console.log('📦 Order ID:', order._id);
+        console.log('👤 Customer:', order.customerName);
+        console.log('📞 Phone:', order.phoneNumber);
+        console.log('💰 Total:', order.totalPrice);
+        console.log('📋 Status:', order.status);
+        console.log('🔢 Items Count:', order.items.length);
+        console.log('⏰ Created At:', order.createdAt);
+        console.log('===============================================\n');
 
         // إرسال إشعار فوري للأدمن عبر Socket.IO
+        const orderObject = order.toObject();
         io.emit('newOrder', {
-            ...order.toObject(),
+            ...orderObject,
             timestamp: new Date(),
             type: 'new_order'
         });
 
-        console.log('📡 Socket event sent to admin dashboard');
+        console.log('📡 Socket event "newOrder" sent to admin dashboard');
+        console.log('📡 Socket Data:', JSON.stringify(orderObject, null, 2));
 
         // إرجاع الطلب للعميل
         const response = {
