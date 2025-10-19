@@ -363,7 +363,7 @@
               <input type="password" id="passwordInput" class="login-input" placeholder="كلمة المرور" />
               <button onclick="login()" class="login-btn">دخول</button>
               <div class="text-center mt-3">
-                <small class="text-muted">⏰ متاح من 6 صباحاً إلى 11 مساءً</small>
+                <small class="text-muted">🔓 متاح 24/7 - في أي وقت</small>
               </div>
             </div>
           </div>
@@ -958,13 +958,13 @@
 
     function login() {
       const password = document.getElementById('passwordInput').value;
-      const currentHour = new Date().getHours();
       
-      // Check time (6 AM to 11 PM)
-      if (currentHour < 6 || currentHour >= 23) {
-        showNotification('غير مسموح بالدخول في هذا الوقت! يمكن الدخول من 6 صباحاً إلى 11 مساءً', 'error');
-        return;
-      }
+      // Time restriction removed - Admin can login anytime 24/7
+      // const currentHour = new Date().getHours();
+      // if (currentHour < 6 || currentHour >= 23) {
+      //   showNotification('غير مسموح بالدخول في هذا الوقت!', 'error');
+      //   return;
+      // }
       
       // Simple password check (in real app, use proper authentication)
       // استخدم متغير البيئة أو كلمة مرور آمنة
