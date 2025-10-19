@@ -11,10 +11,10 @@
 .env.test
 
 # ⚠️ ADMIN PANEL FILES - HIGHLY SENSITIVE! ⚠️
-admin.html
+# admin.html  # Now tracked for deployment (repo is private)
 admin-access.html
-admin-*.html
 admin-real.html
+# admin-*.html  # Allows admin.html but blocks admin-test.html etc
 **/admin/**
 admin/
 order-system-guide.html
