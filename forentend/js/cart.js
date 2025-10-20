@@ -75,6 +75,7 @@ class ShoppingCart {
     updateCartUI() {
         const cartCount = document.getElementById('cartCount');
         const navCartCount = document.getElementById('navCartCount');
+        const cartCountIndex = document.getElementById('cartCountIndex');
         const cartItems = document.getElementById('cartItems');
         const cartTotal = document.getElementById('cartTotal');
         
@@ -91,6 +92,12 @@ class ShoppingCart {
         if (navCartCount) {
             navCartCount.textContent = totalItems;
             navCartCount.style.display = totalItems > 0 ? 'inline' : 'none';
+        }
+        
+        // تحديث عداد العربة في index.html
+        if (cartCountIndex) {
+            cartCountIndex.textContent = totalItems;
+            cartCountIndex.style.display = totalItems > 0 ? 'flex' : 'none';
         }
 
         // قائمة المنتجات
@@ -125,13 +132,29 @@ class ShoppingCart {
 
     // ربط الأحداث
     bindEvents() {
-        // إضافة منتج عند الضغط على أيقونة العربة في المنتجات
+        // إضافة منتج عند الضغط على زر "اطلب الآن" أو أيقونة العربة
         document.addEventListener('click', (e) => {
+            // زر "اطلب الآن"
+            const addToCartBtn = e.target.closest('.add-to-cart-btn');
+            if (addToCartBtn) {
+                e.preventDefault();
+                const name = addToCartBtn.getAttribute('data-name');
+                const price = addToCartBtn.getAttribute('data-price');
+                const image = addToCartBtn.getAttribute('data-image');
+                
+                if (name && price && image) {
+                    this.addItem(name, price, image);
+                }
+                return;
+            }
+            
+            // أيقونة العربة في المنتجات (للتوافق مع القديم)
             if (e.target.closest('.fa-shopping-cart') && e.target.closest('.box')) {
                 e.preventDefault();
                 const box = e.target.closest('.box');
                 const name = box.querySelector('h5').textContent;
-                const price = box.querySelector('h6').textContent.replace('ج', '').trim();
+                const priceText = box.querySelector('h6').textContent.replace('ج', '').trim();
+                const price = priceText.split('\n')[0].trim(); // في حالة وجود نص إضافي
                 const image = box.querySelector('img').src;
                 
                 this.addItem(name, price, image);
@@ -143,8 +166,22 @@ class ShoppingCart {
         if (navCartLink) {
             navCartLink.addEventListener('click', (e) => {
                 e.preventDefault();
-                $('#cartModal').modal('show');
+                this.showCartModal();
             });
+        }
+    }
+    
+    // عرض نافذة العربة
+    showCartModal() {
+        const modal = document.getElementById('cartModal');
+        if (modal && typeof $ !== 'undefined' && $.fn.modal) {
+            $('#cartModal').modal('show');
+        } else {
+            // fallback لو jQuery مش موجود
+            if (modal) {
+                modal.style.display = 'block';
+                modal.classList.add('show');
+            }
         }
     }
 
@@ -186,9 +223,12 @@ class ShoppingCart {
         document.body.insertAdjacentHTML('beforeend', cartHTML);
 
         // ربط أحداث النوافذ
-        document.getElementById('cartIcon').onclick = () => {
-            $('#cartModal').modal('show');
-        };
+        const cartIcon = document.getElementById('cartIcon');
+        if (cartIcon) {
+            cartIcon.onclick = () => {
+                this.showCartModal();
+            };
+        }
 
         // مراقبة تغيير طريقة الدفع
         document.addEventListener('change', (e) => {

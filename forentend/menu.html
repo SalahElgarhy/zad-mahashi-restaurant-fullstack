@@ -756,14 +756,45 @@
       }
     }
     
-    // إنشاء العربة
-    const cart = new ShoppingCart();
-    
     // دالة إضافة للعربة (من menu-dynamic.js)
     function addToCart(id, name, price, image) {
         console.log('🛒 إضافة للعربة:', { id, name, price, image });
-        cart.addItem(name, price, image);
+        if (window.cart) {
+            window.cart.addItem(name, price, image);
+        }
     }
+    
+    // تحديث عداد العربة
+    function updateCartCount() {
+      if (window.cart) {
+        const totalItems = window.cart.getTotalItems();
+        const navCartCount = document.getElementById('navCartCount');
+        if (navCartCount) {
+          navCartCount.textContent = totalItems;
+          navCartCount.style.display = totalItems > 0 ? 'block' : 'none';
+        }
+      }
+    }
+    
+    // تشغيل التحديث عند تحميل الصفحة
+    window.addEventListener('load', function() {
+      updateCartCount();
+      console.log('✅ تم تحميل نظام العربة - صفحة القائمة');
+      
+      // ربط حدث الضغط على العربة في الـNavigation
+      const cartLink = document.querySelector('.cart_link');
+      if (cartLink) {
+        cartLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          console.log('🛒 تم الضغط على أيقونة العربة');
+          if (window.cart) {
+            window.cart.showCartModal();
+          } else {
+            console.error('❌ نظام العربة غير متاح');
+          }
+        });
+      }
+    });
   </script>
   
   <!-- Google Map -->

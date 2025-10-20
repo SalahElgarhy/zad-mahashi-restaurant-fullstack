@@ -327,7 +327,7 @@
               <a href="" class="user_link">
                 <i class="fa fa-user" aria-hidden="true"></i>
               </a>
-              <a class="cart_link" href="checkout.html" id="cartIconIndex" onclick="updateCartIconIndex()">
+              <a class="cart_link" href="#" id="cartIconIndex" style="position: relative; cursor: pointer;">
                 <span id="cartCountIndex" class="cart-count" style="position: absolute; top: -8px; right: -8px; background: #ffbe33; color: #1a1a1a; border-radius: 50%; width: 20px; height: 20px; font-size: 12px; font-weight: bold; display: none; align-items: center; justify-content: center;">0</span>
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
                   <g>
@@ -1698,15 +1698,44 @@
       }
     }
     
-    // إنشاء العربة
-    const cart = new ShoppingCart();
+    // تحديث عداد العربة عند تحميل الصفحة
+    function updateCartIconIndex() {
+      if (window.cart) {
+        const totalItems = window.cart.getTotalItems();
+        const cartCountIndex = document.getElementById('cartCountIndex');
+        if (cartCountIndex) {
+          cartCountIndex.textContent = totalItems;
+          cartCountIndex.style.display = totalItems > 0 ? 'flex' : 'none';
+        }
+      }
+    }
+    
+    // تشغيل التحديث عند تحميل الصفحة
+    window.addEventListener('load', function() {
+      updateCartIconIndex();
+      console.log('✅ تم تحميل نظام العربة');
+      
+      // ربط حدث الضغط على العربة في الـNavigation
+      const cartIconIndex = document.getElementById('cartIconIndex');
+      if (cartIconIndex) {
+        cartIconIndex.addEventListener('click', function(e) {
+          e.preventDefault();
+          console.log('🛒 تم الضغط على أيقونة العربة');
+          if (window.cart) {
+            window.cart.showCartModal();
+          } else {
+            console.error('❌ نظام العربة غير متاح');
+          }
+        });
+      }
+    });
     
     // دالة إضافة للعربة من الصفحة الرئيسية
     function addToCartFromHome(name, price, image) {
       try {
         console.log('🛒 إضافة للعربة:', { name, price, image });
         
-        if (!cart) {
+        if (!window.cart) {
           console.error('❌ خطأ: نظام العربة غير متاح');
           return;
         }
@@ -1716,7 +1745,7 @@
           return;
         }
         
-        cart.addItem(name, price, image);
+        window.cart.addItem(name, price, image);
         
         // إشعار جميل
         showAddToCartNotification(name);
