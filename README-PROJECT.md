@@ -74,7 +74,7 @@ cd ../feane-1.0.0
 3. احصل على connection string
 4. ضع الرابط في ملف `.env`:
 ```
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/database_name
+MONGODB_URI=your_mongodb_connection_string_here
 ```
 
 ## 📁 هيكل المشروع

@@ -52,11 +52,11 @@
    ```env
    PORT=10000
    NODE_ENV=production
-   MONGODB_URI=mongodb+srv://user:pass@cluster.mongodb.net/db
-   JWT_SECRET=your-secret-key
+   MONGODB_URI=your_mongodb_connection_string_here
+   JWT_SECRET=your-secret-key-here
    FRONTEND_URL=https://your-app.onrender.com
    ALLOWED_ORIGINS=https://your-app.onrender.com
-   ADMIN_PASSWORD=your-admin-password
+   ADMIN_PASSWORD=your-admin-password-here
    BCRYPT_ROUNDS=12
    ENABLE_LOGGING=false
    DEBUG_MODE=false

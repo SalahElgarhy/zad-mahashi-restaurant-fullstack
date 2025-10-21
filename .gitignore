@@ -130,3 +130,20 @@ staging/
 !*.md
 !DEPLOYMENT_GUIDE.md
 !SETUP_GUIDE.md
+
+# ملفات شخصية - CVs and Personal Documents
+**/CV*.pdf
+**/CV*.docx
+**/*Resume*.pdf
+**/*Resume*.docx
+**/Salah*.pdf
+**/Salah*.docx
+
+# ملفات دراسية
+**/*.pptx
+**/*.docx
+**/Chapter*.pptx
+**/TMA*.docx
+
+# Admin panel (محلي فقط - security)
+forentend/admin.html

@@ -61,7 +61,7 @@ git push heroku main
 ### 2. **مشكلة MongoDB:**
 ```javascript
 // استخدم MongoDB Atlas (مجاني)
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/zad_mahashi
+MONGODB_URI=your_mongodb_connection_string_here
 
 // أو PlanetScale للـ MySQL
 ```
